@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    #mesaj-kutusu{
+        background-color: darkcyan;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
+    #baslik{
+        cursor: pointer;
+        border-bottom: 1px solid white;
+        padding: 20px;
+    }
+    #kapatma{
+        float: right;
+    }
+    #kapatma:hover{
+        color: red;
+    }
+    #content{
+        background-color: darkcyan;
+        height: 300px;
+        display: none;
+        padding: 10px;
+    }
+
+</style>
+
+<script>
+
+    $(document).ready(function(){
+
+        $("#baslik").click(function(){
+            $("#content").toggle("slow");
+        });
+
+        $("#kapatma").click(function(){
+
+            $("#mesaj-kutusu").hide("slow");
+        })
+
+
+
+
+
+    });
+
+
+
+</script>
+
+<body>
+
+    <div id="mesaj-kutusu">
+        <div id="baslik">
+            <span id="kapatma">X</span>Mesajınız Var
+        </div>
+
+
+
+        <div id="content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis sit, dolorem nemo soluta unde odit?</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
